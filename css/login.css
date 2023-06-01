@@ -40,7 +40,7 @@ body {
   margin-bottom: 50px;
 }
 /* 메인컨텐츠 가운데 정렬*/
-section{
+section {
   position: relative;
   width: 1280px;
   margin: 0 auto;
@@ -52,13 +52,15 @@ section{
   top: 50%;
   transform: translateY(-50%);
   width: 1280px;
+  width: 100%;
 }
 .section-inner h2 {
   width: 100%;
   text-align: center;
 }
-.bodywrap{
+.bodywrap {
   margin: 0px 150px;
+  overflow: hidden;
 }
 .bodywrap .login-img{
   float: left;
@@ -80,94 +82,95 @@ form {
   padding-top: 5px;
 }
 
-form .login-btn{
+form .login-btn {
   width: 330px;
   height: 40px;
   margin-bottom: 10px;
+  border: 1px solid #000;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
-
-form .login-btn:hover{
+form .login-btn:hover {
   background-color: white;
   color: black;
 }
 
-form .user-id{
+form .user-id {
   margin-right: 39.5px;
   margin-top: 1px;
   font-size: 22px;
 }
-form .id input{
+form .id input {
   border-radius: 5px;
   width: 225px;
   height: 27.5px;
   margin-bottom: 8px;
 }
-form .pw{
+form .pw {
   margin-bottom: 10px;
 }
-form .user-pw{
+form .user-pw {
   margin-right: 20px;
   margin-top: 1px;
   font-size: 22px;
 }
-form .pw input{
+form .pw input {
   border-radius: 5px;
   width: 225px;
   height: 27.5px;
   margin-bottom: 8px;
 }
-form .rm{
+form .rm {
   margin-bottom: 10px;
 }
-.rm .re-id{
+.rm .re-id {
   margin-right: 20px;
 }
-.user-menu{
+.user-menu {
   height: 24px;
   margin-bottom: 20px;
 }
-.membership{
+.membership {
   float: left;
   width: 200px;
 }
-.membership .ms-a{
+.membership .ms-a {
   width: 80px;
 }
-.membership a:hover{
+.membership a:hover {
   color: orange;
 }
-.find{
+.find {
   float: right;
 }
-.find .find-a{
+.find .find-a {
   width: 115px;
   margin-right: 25px;
 }
 .find a:hover {
   color :orange;
 }
-.sp-lg{
+.sp-lg {
   width: 330px;
 }
-.sp-lg h4{
+.sp-lg h4 {
   text-align: center;
   margin-bottom: 15px;
   color: #808080;
   font-weight: 400;
 }
 
-.sp-lg-1{
+.sp-lg-1 {
   width: 350px;
 }
-.kakao{
+.kakao {
   float: left;
   width: 50px;
   margin-left: 90px;
   margin-right: 50px;
 }
-.naver{
+.naver {
   float: left;
   width: 80px;
 }
@@ -176,4 +179,126 @@ form .rm{
 footer {
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  section {
+    width: 100%;
+  }
+  .section-inner {
+  }
+  .section-inner h2 {
+    display: none;
+  }
+  .bodywrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-img {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* form */
+  form {
+    float: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .id,
+  .pw {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  form .user-id,
+  form .user-pw {
+    font-size: 1em;
+    margin: 0 1rem 0 0;
+  }
+  input#user-id,
+  input#user-pw {
+    margin: 0;
+    padding: 0 10px;
+    width: auto;
+    height: 25px;
+    border: 1px solid lightslategray;
+  }
+  form .login-btn {
+    width: 330px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  form .login-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  .rm {
+    font-size: .8rem;
+  }
+  .user-menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    height: auto;
+    font-size: .8rem;
+  }
+  .membership {
+    float: none;
+    width: auto;
+  }
+  .membership .ms-a {
+    width: auto;
+  }
+  .find {
+    float: none;
+  }  
+  .find .find-a {
+    margin: 0;
+    width: 100%;
+  }
+  .sp-lg {
+    width: 330px;
+    width: 100%;
+  }
+  .sp-lg h4 {
+    margin: 0 0 1rem 0;
+  }
+  .sp-lg-1 {
+    width: 350px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .sp-lg-1 a {
+    float: none;
+    width: 45px;
+    height: 45px;
+  }
+  .sp-lg-1 a img {
+    width: 100%;
+    height: 100%;
+  }
+  .kakao {
+    margin: 0;
+  }
 }
